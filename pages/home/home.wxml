@@ -1,0 +1,5 @@
+<!--pages/home/home.wxml-->
+<!-- 使用自定义search组件 -->
+<view class="searchBox">
+    <mysearch bindtap="gotoSearch"></mysearch>
+</view>

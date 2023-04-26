@@ -1,14 +1,33 @@
 {
   "pages":[
-    "pages/index/index",
-    "pages/logs/logs"
+      "pages/home/home",
+      "pages/my/my",
+      "pages/search/search",
+      "pages/device_detail/device_detail"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
+    "navigationBarTitleText": "智能充电",
     "navigationBarTextStyle":"black"
   },
-  "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "selectedColor":"#1296db",
+    "color": "#bfbfbf",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "充电",
+        "iconPath":"./image/icon/battery.png",
+        "selectedIconPath":"./image/icon/battery_color.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath":"./image/icon/my.png",
+        "selectedIconPath":"./image/icon/my_color.png"
+      }
+    ]
+  } 
 }

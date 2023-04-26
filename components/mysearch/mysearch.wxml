@@ -1,0 +1,9 @@
+<!--components/mysearch/mysearch.wxml-->
+<view>
+    <view class="my-search-container">
+        <!--  使用view组件模拟 input 输入框 -->
+        <view class="my-search-box" bindtap="searchBoxHandler">
+            <text class="placeholder">搜索在线设备</text>
+        </view>
+    </view>
+</view>

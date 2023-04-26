@@ -1,0 +1,19 @@
+<van-search
+  value="{{ value }}"
+  shape= "round"
+  label=""
+  placeholder="请输入搜索关键词"
+  use-action-slot
+  bind:change="onChange"
+  bind:search="onSearch"
+>
+  <view slot="action" bind:tap="onClick">搜索</view>
+</van-search>
+
+<!-- 搜索建议列表 -->
+<view class="sugg-list">
+    <view class="sugg-item" wx:for="{{searchResults.localData.list}}" wx:key="id" bindtap="gotoDetail" data-name="{{item}}">
+        <view class="device-name">{{item.module}}</view>
+    </view>
+</view>
+
