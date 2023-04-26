@@ -1,5 +1,6 @@
 const myGlobalFunctions = require("../../utils/myGlobalFunctions")
-
+// 引入本地数据
+const localData = require('../../testdata/localData.js');
 // pages/home/home.js
 Page({
 
@@ -7,7 +8,7 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        deviceOnline: []
     },
 
     // 跳转search 页面
@@ -20,11 +21,22 @@ Page({
         })
     },
 
+    // 跳转详情页面
+    gotoDetail(e) {
+        console.log(e)
+        wx.navigateTo({
+            // 跳转指定详情页 并传递设备名称
+          url: '/pages/device_detail/device_detail?device_id=' + e.currentTarget.dataset.name.id,
+        })
+    },
+
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-
+        this.setData({
+            deviceOnline: localData
+        })
     },
 
     /**

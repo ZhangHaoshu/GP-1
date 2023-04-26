@@ -4,3 +4,30 @@
     top: 0;
     z-index: 999;
 }
+
+.device-info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+    padding-top: 10px;
+    border-bottom: 1px solid #efefef;
+}
+
+.device-status {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.device-info image {
+    width: 200rpx;
+    height: 250rpx;
+    border: 1px solid #ffffff;
+}
+
+.device-info text {
+    font-size: 25rpx;
+    padding: 5px
+}

@@ -3,3 +3,24 @@
 <view class="searchBox">
     <mysearch bindtap="gotoSearch"></mysearch>
 </view>
+<!-- 分割线 -->
+<van-divider contentPosition="center" customStyle="color: #C9CAD1; border-color: #C9CAD1; font-size: 18px;">
+    充电状态
+</van-divider>
+
+<!-- 在线设备 -->
+<view class="device">
+    <!-- 设备信息 -->
+    <view class="device-info" wx:for="{{deviceOnline.localData.list}}" wx:key="id" bindtap="gotoDetail" data-name="{{item}}">
+        <!-- 左侧设备图片 -->
+        <image src="{{item.src}}" mode="scaleToFill"></image>
+        <!-- 右侧设备状态 -->
+        <view class="device-status">
+            <!-- 设备名称 -->
+            <text class="device-name">{{item.module}} </text>
+            <!-- 设备充电进度 -->
+            <text class="device-battery">设备充电进度为：{{item.battery}}%</text>
+        </view>
+
+    </view>
+</view>
