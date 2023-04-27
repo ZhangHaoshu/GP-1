@@ -1,1 +1,33 @@
 /* pages/device_detail/device_detail.wxss */
+.detail {
+    display: flex;
+}
+
+.progress {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 90px;
+}
+
+.detail-info {
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+
+}
+
+.detail-info image {
+    width: 250rpx;
+    height: 350rpx;
+    align-items: center;
+    border: 1px solid #efefef;
+    
+} 
+.Info {
+    display: flex;
+    flex-direction: column;
+}
+.Info text {
+    padding:7px 20px;
+    /* border-bottom: 1px solid #efefef; */
+}
