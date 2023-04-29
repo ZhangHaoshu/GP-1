@@ -70,7 +70,7 @@ Page({
 
     // 跳转详情页面
     gotoDetail(e) {
-        console.log(e)
+        //console.log(e)
         wx.navigateTo({
             // 跳转指定详情页 并传递设备名称
           url: '/pages/device_detail/device_detail?device_id=' + e.currentTarget.dataset.name.id,

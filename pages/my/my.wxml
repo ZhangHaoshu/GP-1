@@ -1,2 +1,47 @@
-<!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<view>
+    <!-- 用户未登录时 -->
+    <view wx:if="{{userInfo == null}}">
+        <view class="login-container">
+            <!-- 提示登录 -->
+            <image src="../../image/icon/login.png"></image>
+            <!-- 登录按钮 -->
+            <button bindtap="login"> 一键登录</button>
+            <!-- 登录提示 -->
+        </view>
+    </view>
+    <!-- 用户已登录 -->
+    <view wx:if="{{userInfo != null}}" class="userinfo-container">
+        <!-- 头像&昵称 -->
+        <view class="top-box">
+            <!-- 背景 -->
+            <image class="matter-view" src="{{userInfo.avatarUrl}}"></image>
+            <!-- 头像昵称 -->
+            <image class="img" src="{{userInfo.avatarUrl}}"></image>
+            <view class="nickname">{{userInfo.nickName}} </view>
+        </view>
+        <!-- 面板列表区域 -->
+        <view class="panel-list">
+            <view class="panel-list-item" bindtap="gotoHome">
+                <van-icon class="van_icon" name="checked" />
+                <text bindtap="gotoHome">在线设备</text>
+                <van-icon bindtap="gotoHome" name="arrow" />
+            </view>
+            <view class="panel-list-item">
+                <van-icon class="van_icon" name="question" />
+                <text>常见问题</text>
+                <van-icon name="arrow" />
+            </view>
+            <view class="panel-list-item">
+                <van-icon class="van_icon" name="phone" />
+                <!-- <text>联系我们</text> -->
+                <button class='my-button' open-type="contact">联系我们</button>
+                <van-icon name="arrow" />
+            </view>
+            <view class="panel-list-item" bindtap="loginOut">
+                <van-icon class="van_icon" name="clear" />
+                <text>退出登录</text>
+                <van-icon name="arrow" />
+            </view>
+        </view>   
+    </view>
+</view>
